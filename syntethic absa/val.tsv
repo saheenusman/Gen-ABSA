@@ -1,0 +1,3173 @@
+input	target
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: transparency from the mayor's office is lacking, decisions made behind closed doors too much
+Output:
+"	transparency | negative | [0, 1] | Explicit negative: 'transparency is lacking' points to secrecy. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: portion size at the diner was generous, left stuffed and happy for under $10
+Output:
+"	portion_size | positive | [0, 2] | Explicit positive: 'portion size was generous' with satisfaction. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: features in the update added some useful tools, but interface got clunkier imo
+Output:
+"	features | positive | [0, 0] | Explicit positive: 'features added some useful tools' notes benefits. | FALSE | FALSE | FALSE ; interface | negative | [9, 9] | Explicit negative: 'interface got clunkier' indicates usability decline. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: pacing of the episode kept me bingeing, no slow parts to skip
+Output:
+"	pacing | positive | [0, 1] | Explicit positive: 'pacing kept me bingeing' maintains engagement. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: parking availability near the mall is a nightmare, circled for 20 mins
+Output:
+"	parking_availability | negative | [0, 2] | Explicit negative: 'parking availability is a nightmare' wastes time. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: production quality on the podcast is pro, clear audio no background noise
+Output:
+"	production_quality | positive | [0, 2] | Explicit positive: 'production quality is pro' ensures listenability. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: app crashes randomly during workouts, lost my progress twice this week 💔
+Output:
+"	app | negative | [0, 0] | Explicit negative: 'app crashes randomly' erases data. | FALSE | FALSE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: convenience of online ordering saved the day, food hot when it arrived
+Output:
+"	convenience | positive | [0, 1] | Explicit positive: 'convenience saved the day' eases process. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: warranty coverage kicked in for the repair, covered full cost no hassle
+Output:
+"	warranty | positive | [0, 1] | Explicit positive: 'warranty coverage kicked in' protects financially. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: traffic lights timing is off at intersection, causes backups every rush hour
+Output:
+"	traffic | negative | [0, 2] | Explicit negative: 'traffic lights timing is off' worsens flow. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: portions shrank but prices stayed same, feels like a sneaky hike
+Output:
+"	portions | negative | [0, 0] | Explicit negative: 'portions shrank' reduces value. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: customer support chat is 24/7 but bots handle everything, no humans
+Output:
+"	customer_support | neutral | [0, 2] | Explicit neutral: availability good but quality limited by automation. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: leadership change at work brought fresh ideas, team morale up
+Output:
+"	leadership | positive | [0, 1] | Explicit positive: 'leadership change brought fresh ideas' improves environment. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: debating the healthcare bill, pros and cons but leans toward coverage gaps still
+Output:
+"	healthcare_policy | neutral | [1, 2] | Explicit neutral: 'debating healthcare bill' balanced but notes issues. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: senator's leadership on climate bill praised, but follow thru questionable
+Output:
+"	leadership | neutral | [0, 1] | Explicit neutral: 'leadership praised but follow thru questionable' mixed. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: new features in the os include dark mode toggle, finally customizable
+Output:
+"	features | positive | [1, 1] | Explicit positive: 'new features include' useful addition. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: spending bill cuts wasteful programs, redirects to actual needs like roads
+Output:
+"	government_spending | positive | [0, 1] | Explicit positive: 'spending bill cuts wasteful' efficient allocation. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: restaurant cleanliness top tier, tables wiped after every party
+Output:
+"	cleanliness | positive | [1, 1] | Explicit positive: 'cleanliness top tier' maintains standards. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: attitude of the coach motivated the team, turned season around
+Output:
+"	staff_attitude | positive | [2, 2] | Implicit positive: coach 'attitude motivated' influences positively. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: public services app updated, now reports potholes directly to crews
+Output:
+"	public_services | positive | [0, 2] | Explicit positive: app 'updated' streamlines reporting. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: takeout food quality arrived soggy, fries like mush not crisp
+Output:
+"	food_quality | negative | [1, 2] | Explicit negative: 'food quality arrived soggy' transport issue. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: daily commute shortened by new lane, saves 15 mins each way
+Output:
+"	commute | positive | [1, 1] | Explicit positive: 'commute shortened' time savings. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: movie acting nuanced, subtle expressions sold the emotion
+Output:
+"	acting | positive | [1, 1] | Explicit positive: 'acting nuanced' conveys depth. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: bar service quick even packed, bartenders juggling orders smooth
+Output:
+"	service | positive | [1, 1] | Explicit positive: 'service quick' efficient crowd. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: commute app predicts delays accurate, reroutes smart
+Output:
+"	commute | positive | [0, 0] | Explicit positive: app aids 'commute' effectively. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: variety of toppings limited, pizza place needs more options
+Output:
+"	variety | negative | [0, 1] | Explicit negative: 'variety limited' restricts choices. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: show's acting range impressed, villain stole every scene
+Output:
+"	acting | positive | [2, 2] | Explicit positive: 'acting range impressed' standout. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: camera lens smudges easy, wipes leave streaks
+Output:
+"	camera | negative | [0, 1] | Explicit negative: 'camera lens smudges' maintenance issue. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: experience at escape room challenging but fun, clues clever
+Output:
+"	experience | positive | [0, 1] | Explicit positive: 'experience challenging but fun' engaging. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: software glitch froze app mid session, lost edits
+Output:
+"	software | negative | [0, 0] | Explicit negative: 'software glitch froze' data loss. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: battery indicator jumps erratically, trust it less now
+Output:
+"	battery_life | negative | [0, 1] | Explicit negative: 'battery indicator jumps' unreliable. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: speed bumps added to street, traffic calmed neighborhood
+Output:
+"	traffic | positive | [1, 1] | Implicit positive: bumps 'calmed traffic' safer. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: convenience store stock low, basics out often
+Output:
+"	convenience | negative | [0, 1] | Explicit negative: 'convenience store stock low' defeats purpose. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: speed of delivery same day, box intact no dents
+Output:
+"	speed | positive | [0, 1] | Explicit positive: 'speed same day' prompt and careful. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: value proposition strong, perks outweigh annual fee
+Output:
+"	value | positive | [0, 2] | Explicit positive: 'value proposition strong' beneficial. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: video edit session, visuals pop with color grade applied
+Output:
+"	visuals | positive | [2, 2] | Explicit positive: 'visuals pop' enhanced. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: election night coverage, process transparent counts live updated
+Output:
+"	election_process | positive | [3, 3] | Explicit positive: 'process transparent' open. | FALSE | FALSE | FALSE ; election_process | positive | [3, 3] | Explicit positive: 'process transparent' open. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: late night snack, food taste savory crave satisfied
+Output:
+"	food_taste | positive | [3, 3] | Explicit positive: 'food taste savory' fulfilling. | FALSE | FALSE | FALSE ; food_taste | positive | [3, 3] | Explicit positive: 'food taste savory' fulfilling. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: city council session, infrastructure plans ambitious timelines tight
+Output:
+"	infrastructure | neutral | [3, 3] | Explicit neutral: 'infrastructure plans ambitious' bold but challenging. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: rush hour bus, reliability schedules off by 20 mins usual
+Output:
+"	reliability | negative | [3, 3] | Explicit negative: 'reliability schedules off' undependable. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: home office setup, comfort chair adjustable lumbar support gold
+Output:
+"	comfort | positive | [3, 3] | Explicit positive: 'comfort chair adjustable' ergonomic. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: farmers market haul, freshness herbs aromatic pots vibrant
+Output:
+"	freshness | positive | [3, 3] | Explicit positive: 'freshness herbs aromatic' lively. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: backpack for school, durability zippers smooth no snags
+Output:
+"	durability | positive | [3, 3] | Explicit positive: 'durability zippers smooth' lasting. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: app crash report, software patch rolled quick fix applied
+Output:
+"	software | positive | [3, 3] | Explicit positive: 'software patch quick' responsive. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: news alert ping, election process updates real time accurate
+Output:
+"	election_process | positive | [3, 3] | Explicit positive: 'election process updates real time' timely. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: craft beer tasting, freshness brew crisp carbonation lively
+Output:
+"	freshness | positive | [3, 3] | Explicit positive: 'freshness crisp' vibrant. | FALSE | TRUE | FALSE ; freshness | positive | [3, 3] | Explicit positive: 'freshness crisp' vibrant. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: vendor booth chat, staff knowledgeable answers detailed no fluff
+Output:
+"	staff | positive | [3, 3] | Explicit positive: 'staff knowledgeable' informative. | FALSE | FALSE | FALSE ; staff | positive | [3, 3] | Explicit positive: 'staff knowledgeable' informative. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: comedy special stream, dialogue punchy laughs landed hard
+Output:
+"	dialogue | positive | [3, 3] | Explicit positive: 'dialogue punchy' humorous. | FALSE | FALSE | FALSE ; dialogue | positive | [3, 3] | Explicit positive: 'dialogue punchy' humorous. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: backyard fire pit, atmosphere cozy flames crackle stories flow
+Output:
+"	atmosphere | positive | [3, 3] | Explicit positive: 'atmosphere cozy' intimate. | FALSE | FALSE | FALSE ; atmosphere | positive | [3, 3] | Explicit positive: 'atmosphere cozy' intimate. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: farm to table dinner, food quality ingredients peak season shine
+Output:
+"	food_quality | positive | [3, 3] | Explicit positive: 'food quality peak' superior. | FALSE | FALSE | FALSE ; food_quality | positive | [3, 3] | Explicit positive: 'food quality peak' superior. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: script table read, dialogue banter sharp wit fly
+Output:
+"	dialogue | positive | [3, 3] | Explicit positive: 'dialogue banter sharp' clever. | FALSE | FALSE | FALSE ; dialogue | positive | [3, 3] | Explicit positive: 'dialogue banter sharp' clever. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: remote work day, work life balance boundary set emails off hours
+Output:
+"	work_life_balance | positive | [3, 4] | Explicit positive: 'work life balance boundary' protected. | FALSE | FALSE | FALSE ; work_life_balance | positive | [3, 4] | Explicit positive: 'work life balance boundary' protected. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: pizza delivery late, service quality box collapsed toppings slid
+Output:
+"	service_quality | negative | [3, 3] | Explicit negative: 'service quality box collapsed' damaged. | FALSE | FALSE | FALSE ; service_quality | negative | [3, 3] | Explicit negative: 'service quality box collapsed' damaged. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: arcade night out, game performance smooth no lag joysticks responsive
+Output:
+"	performance | positive | [3, 3] | Explicit positive: 'game performance smooth' enjoyable. | FALSE | FALSE | FALSE ; performance | positive | [3, 3] | Explicit positive: 'game performance smooth' enjoyable. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: cloud backup fail, reliability cloud service question data loss risk
+Output:
+"	reliability | negative | [3, 3] | Explicit negative: 'reliability question' vulnerable. | FALSE | FALSE | FALSE ; reliability | negative | [3, 3] | Explicit negative: 'reliability question' vulnerable. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: ferry crossing calm, public transport scenic views bonus relax
+Output:
+"	public_transport | positive | [3, 3] | Explicit positive: 'public transport scenic' enjoyable. | FALSE | FALSE | FALSE ; public_transport | positive | [3, 3] | Explicit positive: 'public transport scenic' enjoyable. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: drone flight park, camera feed stable wind gust resist
+Output:
+"	camera | positive | [3, 3] | Explicit positive: 'camera feed stable' steady. | FALSE | FALSE | FALSE ; camera | positive | [3, 3] | Explicit positive: 'camera feed stable' steady. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: script doctor notes, dialogue polish edge sharp cut
+Output:
+"	dialogue | positive | [3, 3] | Explicit positive: 'dialogue polish edge' refined. | FALSE | FALSE | FALSE ; dialogue | positive | [3, 3] | Explicit positive: 'dialogue polish edge' refined. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: fitness tracker sync, app data accurate heart rate spot
+Output:
+"	app | positive | [3, 3] | Explicit positive: 'app data accurate' precise. | FALSE | FALSE | FALSE ; app | positive | [3, 3] | Explicit positive: 'app data accurate' precise. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: road rage incident, traffic cop pull over ticket steep lesson learn
+Output:
+"	traffic | negative | [3, 3] | Explicit negative: 'traffic cop ticket' penalized. | FALSE | FALSE | FALSE ; traffic | negative | [3, 3] | Explicit negative: 'traffic cop ticket' penalized. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: just love how my new earbuds last forever on a charge, said no one ever lol 💀
+Output:
+"	battery_life | negative | [6, 6] | SARCASM: 'love how... said no one ever' contradicts poor endurance implied. | TRUE | TRUE | TRUE ; battery_life | negative | [6, 6] | SARCASM: 'love how... said no one ever' contradicts poor endurance implied. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: tacos here are life changing, if you like cardboard flavoring 😂
+Output:
+"	taste | negative | [1, 1] | SARCASM: 'life changing' with 'cardboard' mocks bland taste. | TRUE | FALSE | TRUE ; taste | negative | [1, 1] | SARCASM: 'life changing' with 'cardboard' mocks bland taste. | TRUE | FALSE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: menu options are endless, all taste the same thrill
+Output:
+"	menu | negative | [0, 1] | SARCASM: 'endless' with 'same taste' for lack of variety. | TRUE | FALSE | FALSE ; menu | negative | [0, 1] | SARCASM: 'endless' with 'same taste' for lack of variety. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: acting in the ad is oscar worthy, robot delivery vibes
+Output:
+"	acting | negative | [0, 1] | SARCASM: 'oscar worthy' for stiff performance. | FALSE | FALSE | FALSE ; acting | negative | [0, 1] | SARCASM: 'oscar worthy' for stiff performance. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: wait for bus eternal, public transport schedule fiction basically
+Output:
+"	public_transport | negative | [3, 3] | SARCASM: 'schedule fiction' for unreliability. | TRUE | FALSE | FALSE ; public_transport | negative | [3, 3] | SARCASM: 'schedule fiction' for unreliability. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: speed of the download is lightning, snails pace joke
+Output:
+"	speed | negative | [0, 3] | SARCASM: 'lightning' for slow 'snails pace'. | FALSE | FALSE | FALSE ; speed | negative | [0, 3] | SARCASM: 'lightning' for slow 'snails pace'. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: help from the guide invaluable, pointed wrong way twice
+Output:
+"	helpfulness | negative | [0, 2] | SARCASM: 'invaluable' for misleading directions. | FALSE | TRUE | FALSE ; helpfulness | negative | [0, 2] | SARCASM: 'invaluable' for misleading directions. | FALSE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: features smart home hub central, glitches galore
+Output:
+"	features | negative | [0, 1] | SARCASM: 'smart' with glitches. | TRUE | FALSE | FALSE ; features | negative | [0, 1] | SARCASM: 'smart' with glitches. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: daily grind hitting hard this month with rent up 15 percent and groceries climbing too, housing situation in the burbs turning into a squeeze with neighbors packing up for cheaper spots out state, commute to the office now 50 mins each way cuz of the new toll road thats supposed to ease traffic but just adds fees, work life balance shot cuz im glued to emails post 6pm, cost of living here prolly the worst its been since i moved in 2018, neighborhood safety okay but parking availability gone with all the new builds popping up, honestly thinking of bailing for a smaller town where things dont cost an arm
+Output:
+"	housing_situation | negative | [7, 8] | Explicit negative: 'housing situation squeeze' with rising rent. | FALSE | FALSE | FALSE ; commute | negative | [18, 18] | Explicit negative: 'commute 50 mins' lengthened by tolls. | FALSE | FALSE | FALSE ; work_life_balance | negative | [28, 29] | Explicit negative: 'work life balance shot' overtime intrusion. | FALSE | FALSE | FALSE ; cost_of_living | negative | [34, 35] | Explicit negative: 'cost of living worst' escalating expenses. | FALSE | FALSE | FALSE ; housing_situation | negative | [7, 8] | Explicit negative: 'housing situation squeeze' with rising rent. | FALSE | FALSE | FALSE ; commute | negative | [18, 18] | Explicit negative: 'commute 50 mins' lengthened by tolls. | FALSE | FALSE | FALSE ; work_life_balance | negative | [28, 29] | Explicit negative: 'work life balance shot' overtime intrusion. | FALSE | FALSE | FALSE ; cost_of_living | negative | [34, 35] | Explicit negative: 'cost of living worst' escalating expenses. | FALSE | FALSE | FALSE ; parking_availability | negative | [42, 43] | Explicit negative: 'parking availability gone' scarce. | FALSE | FALSE | FALSE ; neighborhood_safety | neutral | [41, 41] | Explicit neutral: 'neighborhood safety okay' average. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: deductions wiped out my refund, filing extension next year
+Output:
+"	tax_policy | negative | [] | Implicit: no refund from deductions suggests unfavorable rules. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: hostess seated us quick despite the rush, nice touch
+Output:
+"	service_speed | positive | [1, 1] | Explicit positive: 'seated quick' efficient. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: senators flip flopped on the vote, trust eroding fast
+Output:
+"	leadership | negative | [0, 1] | Explicit negative: 'flip flopped' inconsistent. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: steak cut thick, rare just how i like
+Output:
+"	portion_size | positive | [1, 1] | Explicit positive: 'cut thick' generous serving. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: drive thru burger soggy bun, napkins galore
+Output:
+"	food_quality | negative | [] | Implicit: soggy bun needing napkins infers poor prep. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: arc wrapped loose, sequel bait obvious
+Output:
+"	story | negative | [0, 0] | Explicit negative: 'wrapped loose' unresolved. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: ticket stalled in queue, refresh loop hell
+Output:
+"	support | negative | [] | Implicit: stalled queue and loop imply slow response. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: street lamps fixed, night jogs safe
+Output:
+"	infrastructure | positive | [] | Implicit: fixed lamps enable safe jogs, better lighting. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: veggies limp in bag, compost bound
+Output:
+"	freshness | negative | [0, 0] | Explicit negative: 'limp veggies' spoiled. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: rebate check cleared quick, extra cash flow
+Output:
+"	tax_policy | positive | [] | Implicit: quick rebate provides cash flow benefit. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: thread count high, sheets soft sleep deep
+Output:
+"	quality | positive | [0, 1] | Explicit positive: 'thread high soft' premium. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: garage echo empty, hunt spot futile
+Output:
+"	parking_availability | negative | [] | Implicit: empty echo and futile hunt show scarcity. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: episode edit tight, flow seamless
+Output:
+"	production_quality | positive | [1, 1] | Explicit positive: 'edit tight seamless' polished. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: therapy copay dropped, sessions weekly
+Output:
+"	healthcare_policy | positive | [] | Implicit: dropped copay enables weekly sessions, affordable. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: headset mic clear, no static calls
+Output:
+"	audio | positive | [1, 1] | Explicit positive: 'mic clear no static' crisp. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: kiosk self scan, line skip
+Output:
+"	convenience | positive | [0, 1] | Explicit positive: 'self scan line skip' quick. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: hold music loops, patience thins
+Output:
+"	customer_support | negative | [] | Implicit: looping music thins patience, long waits. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: rail delay chain, domino late
+Output:
+"	public_transport | negative | [] | Implicit: delay chain domino late, unreliable chain. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: express lane zip, cart full fly
+Output:
+"	service_speed | positive | [0, 1] | Explicit positive: 'lane zip fly' quick. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: memo leak, trust shatter
+Output:
+"	transparency | negative | [0, 0] | Explicit negative: 'leak trust shatter' breach. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: patio string lights glow, tales spin
+Output:
+"	atmosphere | positive | [1, 1] | Explicit positive: 'lights glow tales spin' cozy. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: montage rush, breath catch
+Output:
+"	pacing | positive | [0, 0] | Explicit positive: 'rush breath catch' dynamic. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: flag raised half mast, honors fade
+Output:
+"	transparency | negative | [] | Implicit: half mast honors fade imply unclear tribute. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: bezel slim edge, content full
+Output:
+"	design | positive | [0, 0] | Explicit positive: 'bezel slim content full' modern. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: subsidies flow clinic, doors open wide
+Output:
+"	healthcare_policy | positive | [] | Implicit: subsidies open doors, expanded access. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: concierge tip top, recs gold
+Output:
+"	customer_service | positive | [0, 0] | Explicit positive: 'concierge tip top gold' expert. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: lume chase dynamic, eye candy
+Output:
+"	cinematography | positive | [0, 0] | Explicit positive: 'chase dynamic eye candy' visual. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: car pool lane, bond build
+Output:
+"	commute | positive | [2, 2] | Explicit positive: 'pool lane bond' social. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: audit trail long, trust build
+Output:
+"	accountability | positive | [1, 1] | Explicit positive: 'trail long trust' transparent. | FALSE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: switched 🏠 to this 🏠 tablet underperforms nailed it prolly 🎉 tho cap smooth sailing smh rn like top notch pure bliss
+Output:
+"	camera | positive | [] | Implicit positive: description of camera. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: been using my laptop 📱 for work doesnt hold up total 📝 fail wanna trash gonna cuz 😩 mid
+Output:
+"	value | negative | [1, 6] | Implicit negative: description of value. | TRUE | FALSE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: picked up this ☕ phone 💻 yesterday comes short 💔 fantastic, yeah right, pain in the ass highkey wtf
+Output:
+"	value | negative | [4, 12] | Implicit negative: description of value. SARCASM: uses irony to convey opposite sentiment. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: been using my laptop for work feels off top notch lowkey top notch ur basically idk trash effortless I mean pure bliss lmao basically imo smh fire u u fr pure bliss u omg ur like wanna cap bussin pure bliss lowkey tho tbh trash wanna lol smooth sailing 👍 lmao honestly basically highkey af top notch highkey cuz honestly so pure bliss fr gonna no cap tho omg so wtf u lowkey gonna prolly basically cuz omg delightful surprise trash thru cuz lmao smh nailed it tbh tho 💯 omg cap tbh lmao
+Output:
+"	compatibility | positive | [11, 56] | Implicit positive: description of compatibility. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: my watch is 💀 acting up lacks punch ✨ nightmare scenario so lowkey 🍕 u thru total fail I mean tbh bussin 👏 drag on forever u highkey u ✨ no cap highkey bruh cap cuz lowkey imo highkey ffs ur no cap lol lol fr no cap
+Output:
+"	durability | negative | [1, 21] | Implicit negative: description of durability. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: picked up this 😂 phone yesterday camera quality total fail fr imo tho tho honestly like ffs cuz 🚗 no cap drag on forever so bruh cap literally mid imo cap u bussin literally disaster waiting cap 🍕 disaster waiting gonna idk bruh u
+Output:
+"	camera_quality | negative | [38, 39] | Explicit negative: description of camera_quality. | FALSE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: gaming on the console doesnt 🤯 hold up soul 🤷 crushing idk cuz tho utter letdown bruh 💀 omg mid
+Output:
+"	battery_drain | negative | [] | Implicit negative: description of battery_drain. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: gaming on the console lacks punch status quo basically ffs ngl
+Output:
+"	speed | neutral | [2, 10] | Implicit neutral: description of speed. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: tested the new headphones colors fade in sun durability along with app minus total fail no cap idk fire honestly fire drag on forever utter letdown lowkey basically basically ngl disaster waiting fr smh ngl utter letdown like idk disaster waiting tho pain in the ass cuz utter letdown literally rn no cap omg tho prolly imo 😍 ur wanna cuz smh thru ur imo trash honestly mid wtf ur ngl drag on forever total fail idk ffs cuz tho lol 🍜 mid total fail 😍 total fail trash ur nightmare scenario disaster waiting cap so mid bussin fire basically 💔 drag on forever I mean
+Output:
+"	screen_quality | negative | [12, 23] | Implicit negative: evidence for screen_quality. | TRUE | TRUE | TRUE ; durability | positive | [38, 40] | Explicit positive: evidence for durability. | FALSE | TRUE | TRUE ; app | negative | [12, 14] | Explicit negative: evidence for app. | FALSE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: 📱 picked up this 💔 phone yesterday ✨ misses mark minus feels off and get this misses mark along with nailed it 🏠 lol tbh fr ur rn honestly fr cuz af gonna no cap nailed it tho bussin fire u bruh
+Output:
+"	build_quality | positive | [30, 36] | Implicit positive: evidence for build_quality. | TRUE | TRUE | TRUE ; performance | positive | [2, 34] | Implicit positive: evidence for performance. | TRUE | TRUE | TRUE ; interface | neutral | [3, 34] | Implicit neutral: evidence for interface. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: tested the new 🚗 headphones feels off minus misses mark not to mention pain in the ass af bussin ur bussin tho honestly ✨ basically so smh bruh drag on forever smh af gonna drag on forever nightmare scenario drag on forever idk thru no cap
+Output:
+"	display | neutral | [15, 44] | Implicit neutral: evidence for display. | TRUE | FALSE | FALSE ; performance | negative | [] | Implicit negative: evidence for performance. | TRUE | FALSE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: my watch is acting up overhyped plus does hold up and get this pure bliss no cap imo I mean wtf imo smooth sailing I mean fire ur smh omg lol top notch thru trash gonna mid imo highkey
+Output:
+"	app | negative | [12, 27] | Implicit negative: evidence for app. | TRUE | TRUE | FALSE ; build_quality | positive | [16, 22] | Implicit positive: evidence for build_quality. | TRUE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: switched to this tablet charging every hour not to mention value and get this build quality and get this so so no cap I mean so so bruh 🤦 cap wtf 👏 prolly cuz lowkey wtf bussin ngl no cap prolly
+Output:
+"	battery_life | positive | [] | Implicit positive: evidence for battery_life. | TRUE | TRUE | TRUE ; value | neutral | [15, 16] | Explicit neutral: evidence for value. | FALSE | TRUE | TRUE ; build_quality | neutral | [1, 2] | Explicit neutral: evidence for build_quality. | FALSE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: switched to 🍜 this tablet underperforms plus overhyped minus fair play tbh gonna u thru fire fr cap fair play ffs fr smh imo idk mid basically nothing groundbreaking cuz nothing groundbreaking status quo imo I mean like bruh bruh bussin fair play bruh trash prolly idk rn gonna middle ground honestly af ur tbh imo thru status quo tbh fair play tho 💯 lol trash I mean wanna I mean decent enough u mid highkey I mean 🎉 basically decent enough middle ground fire ngl lowkey fr honestly fire 😤 like like thru bussin smh omg 💪 thru smh lmao
+Output:
+"	features | neutral | [2, 83] | Implicit neutral: evidence for features. | TRUE | TRUE | TRUE ; sound_quality | neutral | [] | Implicit neutral: evidence for sound_quality. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: been using my 😂 laptop for work 👏 shots come out 📕 grainy along with lacks punch 📱 feels off minus nightmare scenario like ur wtf pain in the ass u so drag on forever so I mean omg cap utter letdown basically lmao total fail tho lowkey
+Output:
+"	camera_quality | negative | [41, 42] | Implicit negative: evidence for camera_quality. | TRUE | TRUE | TRUE ; display | negative | [2, 46] | Implicit negative: evidence for display. | TRUE | TRUE | TRUE ; price | neutral | [6, 38] | Implicit neutral: evidence for price. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: tried the burger joint down the street comes well effortless like lmao fr spot on fire smooth sailing
+Output:
+"	service_speed | positive | [1, 2] | Implicit positive: description of service_speed. | TRUE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: ordered takeout from sushi place overhyped run of the mill honestly no cap tho rn decent enough rn trash basically rn u rn bussin imo decent enough gonna idk tho I mean trash prolly trash basically mid bussin status quo omg
+Output:
+"	atmosphere | neutral | [31, 35] | Implicit neutral: description of atmosphere. | TRUE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: ordered takeout from sushi place comes short fantastic, yeah right, utter letdown honestly soul crushing rn ur imo mid tbh lowkey disaster waiting highkey prolly lmao basically drag on forever so drag on forever ngl highkey mid wtf basically ffs trash fr
+Output:
+"	service_speed | negative | [5, 16] | Implicit negative: description of service_speed. SARCASM: uses irony to convey opposite sentiment. | TRUE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: cooked pasta for lunch misses mark delightful surprise smh trash rn ur smooth sailing bussin basically af basically fire bruh ffs gonna fr basically I mean ffs imo cap rn bussin mid honestly bruh lowkey bussin ur af
+Output:
+"	food_taste | positive | [2, 27] | Implicit positive: description of food_taste. | TRUE | TRUE | FALSE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: 🎉 brunch 💱 at 🎉 the 💯 diner was doesnt hold up nothing groundbreaking wanna af lmao
+Output:
+"	vibe | neutral | [9, 13] | Implicit neutral: description of vibe. | TRUE | FALSE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: had dinner at the corner cafe lacks punch genius level, yeah right, ☕ decent enough prolly fr gonna prolly imo no cap decent enough lowkey gonna lmao fr 💀 omg 🤷 mid tho 😍 nothing groundbreaking run of the mill idk ur gonna gonna so so so
+Output:
+"	food_quality | neutral | [] | Implicit neutral: description of food_quality. SARCASM: uses irony to convey opposite sentiment. | TRUE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: had 🔥 dinner at the corner cafe lacks punch feels off plus 📝 portions and get this food quality and get this dream come true, yeah right, disaster 🏠 waiting omg tho highkey bussin wanna ngl honestly idk basically
+Output:
+"	vibe | neutral | [] | Implicit neutral: evidence for vibe. SARCASM: sarcastic tone indicates opposite. | TRUE | TRUE | TRUE ; variety | negative | [20, 28] | Implicit negative: evidence for variety. | TRUE | TRUE | TRUE ; portions | negative | [2, 3] | Explicit negative: evidence for portions. SARCASM: sarcastic tone indicates opposite. | FALSE | TRUE | TRUE ; food_quality | negative | [2, 4] | Explicit negative: evidence for food_quality. | FALSE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: snagged tacos from truck underperforms and get this feels off along with vibe plus ☕ status quo literally so tbh gonna decent enough rn literally like 🏠 basically 👏 imo highkey rn wtf smh mid tbh lmao omg thru wtf
+Output:
+"	portion_size | neutral | [4, 6] | Implicit neutral: evidence for portion_size. | TRUE | TRUE | TRUE ; cleanliness | neutral | [6, 13] | Implicit neutral: evidence for cleanliness. | TRUE | TRUE | TRUE ; vibe | neutral | [17, 19] | Explicit neutral: evidence for vibe. | FALSE | TRUE | TRUE
+"Extract aspects and sentiments. Output format: aspect | sentiment | span | rationale | is_implicit | has_slang | has_emoji
+Separate multiple aspects with ' ; '.
+
+Example 1:
+Text: Great food, slow service.
+Output:
+food | positive | [1, 1] | User praises food. | FALSE | FALSE | FALSE ; service | negative | [3, 3] | User complains about service speed. | FALSE | FALSE | FALSE
+
+Example 2:
+Text: ugh battery draining so fast 😩
+Output:
+battery | negative | [2, 2] | Complaint about battery life. | FALSE | TRUE | TRUE
+
+Example 3:
+Text: This place is beautiful and perfect for dates.
+Output:
+ambiance | positive | [] | Implicit praise of atmosphere. | TRUE | FALSE | FALSE
+
+Example 4:
+Text: love the camera but battery life sucks 😤
+Output:
+camera | positive | [2, 2] | User likes camera. | FALSE | FALSE | TRUE ; battery_life | negative | [5, 6] | User dislikes battery using slang. | FALSE | TRUE | TRUE
+
+Text: snagged tacos from truck atmosphere plus vibe along with drag on forever so no cap fr idk pain in the ass highkey mid mid total fail omg no cap fire fire gonna disaster waiting u highkey af wanna fr literally bruh no cap
+Output:
+"	atmosphere | negative | [3, 5] | Explicit negative: evidence for atmosphere. | FALSE | TRUE | FALSE ; vibe | negative | [15, 16] | Explicit negative: evidence for vibe. | FALSE | TRUE | FALSE
